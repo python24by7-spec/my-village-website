@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Skill Sharing - My Village</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="skills.css" />
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <nav class="navbar">
+      <div class="logo">My Village</div>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="aboutus.html">About Us</a></li>
+        <li><a href="events.html">Events</a></li>
+        <li><a href="suggestions.html">Suggestion Box</a></li>
+        <li class="more-menu">
+          <button id="moreBtn">More ▼</button>
+          <ul class="dropdown" id="moreDropdown">
+            <li><a href="skills.html" class="active">Skill Sharing</a></li>
+          </ul>
+        </li>
+      </ul>
+      <div class="hamburger" id="hamburger">&#9776;</div>
+    </nav>
+  </header>
+
+  <!-- Main -->
+  <main class="skills-page">
+    <h1>Skill Sharing & Learning Hub</h1>
+    <p>Learn from our talented villagers and gain new skills.</p>
+
+    <!-- Dropdown selection -->
+    <div class="course-select">
+      <label for="courseDropdown">Choose a course:</label>
+      <select id="courseDropdown">
+        <option value="">-- Select a course --</option>
+      </select>
+    </div>
+
+    <!-- Course list -->
+    <div class="course-list" id="courseList"></div>
+
+    <!-- Course details -->
+    <div class="course-details" id="courseDetails" style="display:none;">
+      <h2 id="courseTitle"></h2>
+      <img id="mentorPhoto" alt="Mentor Photo" />
+      <p><strong>Mentor:</strong> <span id="mentorName"></span></p>
+      <p><strong>Syllabus:</strong></p>
+      <ul id="syllabusList"></ul>
+      <p><strong>Duration:</strong> <span id="courseDuration"></span> hours</p>
+      <button id="enrollBtn">Enroll Now</button>
+      <p id="contactInfo" style="display:none;"></p>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-left">
+      <h4>Contact Us</h4>
+      <p>Office Contact No: +91 96631 12089</p>
+      <p>Email: info@kopwaon.com</p>
+    </div>
+    <div class="footer-right">
+      <h4>Address</h4>
+      <p>Village - Kopwaon, District - Buxar</p>
+      <p>State - Bihar, PIN - 802126</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+  <script src="skills.js"></script>
+</body>
+</html>

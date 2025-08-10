@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Suggestion Box - Kopwaon Village</title>
+  <!-- Link to your common CSS -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <nav class="navbar">
+      <div class="logo">Kopwaon Village</div>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="aboutus.html">About Us</a></li>
+        <li><a href="events.html">Event Calendar</a></li>
+        <li><a href="suggestions.html" class="active">Suggestion Box</a></li>
+        <li class="more-menu">
+          <button id="moreBtn" aria-expanded="false" aria-haspopup="true">More ▼</button>
+          <ul class="dropdown" id="dropdownMenu">
+            <li><a href="skills.html">Skill Sharing</a></li>
+          </ul>
+        </li>
+      </ul>
+      <div class="hamburger" id="hamburger">&#9776;</div>
+    </nav>
+  </header>
+
+  <!-- Main Content -->
+  <main class="suggestion-page">
+    <h1>Suggestion Box</h1>
+    <form id="suggestionForm" novalidate>
+      <label for="name">Name *</label>
+      <input type="text" id="name" name="name" placeholder="Your name" required />
+
+      <label for="email">Email *</label>
+      <input type="email" id="email" name="email" placeholder="your.email@example.com" required />
+
+      <label for="suggestion">Your Suggestion *</label>
+      <textarea id="suggestion" name="suggestion" placeholder="Write your suggestion here..." required></textarea>
+
+      <button type="submit">Submit Suggestion</button>
+      <div id="formMessage" role="alert" aria-live="polite"></div>
+    </form>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-left">
+      <h4>Contact Us</h4>
+      <p>Office Contact No: +91 96631 12089</p>
+      <p>Email: info@kopwaon.com</p>
+    </div>
+    <div class="footer-right">
+      <h4>Address</h4>
+      <p>Village - Kopwaon, District - Buxar</p>
+      <p>State - Bihar, PIN - 802126</p>
+    </div>
+  </footer>
+
+  <!-- Link to your common JS -->
+  <script src="script.js"></script>
+</body>
+</html>

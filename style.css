@@ -1,0 +1,774 @@
+/* Reset */
+* {
+  margin: 0; padding: 0; box-sizing: border-box;
+}
+
+/* html and body full height */
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
+/* Body flex container with column layout */
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  font-family: Arial, sans-serif;
+  background-color: #e0f7fa;
+  color: #004d40;
+}
+
+/* Header styling */
+header {
+  flex-shrink: 0;
+  height: 80px;
+  background-color: #00796b;
+  padding: 0 30px;
+  display: flex;
+  align-items: center;
+  border-radius: 8px 8px 0 0;
+  color: white;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Navbar inside header */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+/* Logo */
+.logo {
+  font-size: 1.6rem;
+  font-weight: bold;
+}
+
+/* Navigation links */
+.nav-links {
+  list-style: none;
+  display: flex;
+  width: 100%;
+  justify-content: space-evenly;
+  align-items: center;
+  font-size: 1.1rem;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+.nav-links li {
+  flex: 1;
+  text-align: center;
+  max-width: 180px;
+}
+
+/* Updated More button styles */
+.nav-links li a,
+.more-menu button {
+  display: inline-block;
+  width: 100%;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 10px 0;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+  cursor: pointer;
+  font-size: 1.1rem;
+  font-family: inherit;
+  text-align: center;
+  background-color: transparent; /* No background */
+  border: none;                  /* No border */
+}
+
+.nav-links li a:hover,
+.more-menu button:hover,
+.more-menu button:focus {
+  background-color: #004d40;
+  outline: none;
+}
+
+/* More menu styles */
+.more-menu {
+  position: relative;
+}
+
+.dropdown {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #00796b; /* same green as header/nav */
+  border-radius: 0 0 8px 8px;
+  list-style: none;
+  padding: 5px 0;
+  min-width: 170px;
+  display: none;
+  z-index: 200;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+  color: white; /* white text */
+}
+
+.dropdown.show {
+  display: block;
+}
+
+.dropdown li a {
+  color: white;
+  padding: 8px 16px;
+  display: block;
+  text-decoration: none;
+  font-weight: normal;
+  transition: background-color 0.3s ease;
+}
+
+.dropdown li a:hover {
+  background-color: #004d40;
+}
+
+/* Hamburger menu */
+.hamburger {
+  display: none;
+  font-size: 2rem;
+  color: white;
+  cursor: pointer;
+}
+
+/* Main content fills remaining space */
+main {
+  flex: 1 1 auto;
+  padding: 0 30px 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+/* Welcome Section */
+#welcome {
+  text-align: center;
+  margin-bottom: 40px;
+  color: #004d40;
+}
+
+#welcome h1 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+
+#welcome p {
+  font-size: 1.2rem;
+}
+
+/* Gallery styles */
+#gallery {
+  max-width: 500px;
+  width: 100%;
+  text-align: center;
+}
+
+#gallery h2 {
+  color: #00796b;
+  margin-bottom: 20px;
+}
+
+.image-container {
+  width: 500px;
+  height: 330px;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin: 0 auto;
+}
+
+.image-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+#caption {
+  background-color: rgba(0, 121, 107, 0.8);
+  color: white;
+  padding: 10px 0;
+  font-weight: bold;
+  font-size: 1rem;
+  text-align: center;
+  user-select: none;
+}
+
+/* Gallery buttons */
+.gallery-controls {
+  margin-top: 20px;
+  margin-bottom: 40px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+.gallery-controls button {
+  background-color: #00796b;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  font-weight: bold;
+  font-size: 0.9rem;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.gallery-controls button:hover {
+  background-color: #004d40;
+}
+
+/* Footer styling */
+footer {
+  flex-shrink: 0;
+  background-color: #00796b;
+  padding: 10px 30px;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  border-radius: 0 0 8px 8px;
+  color: white;
+  width: 100%;
+  min-height: 80px;
+  overflow: hidden;
+  gap: 20px;
+}
+
+/* Left and right footer sections */
+.footer-left {
+  flex: 1 1 auto;
+  min-width: 200px;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  text-align: left;
+}
+
+.footer-right {
+  flex: 1 1 auto;
+  min-width: 200px;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  text-align: right;
+}
+
+/* Footer paragraphs */
+footer p {
+  margin: 5px 0;
+  line-height: 1.4;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .nav-links {
+    position: fixed;
+    right: 0;
+    top: 0;
+    height: 100vh;
+    background-color: #00796b;
+    flex-direction: column;
+    width: 200px;
+    padding-top: 60px;
+    transform: translateX(100%);
+    transition: transform 0.3s ease-in-out;
+    z-index: 100;
+  }
+  .nav-links.active {
+    transform: translateX(0);
+  }
+  .nav-links li {
+    flex: none;
+    max-width: none;
+    text-align: center;
+    margin: 20px 0;
+  }
+  .hamburger {
+    display: block;
+  }
+  footer {
+    flex-direction: column;
+    height: auto;
+    text-align: center;
+    align-items: center;
+    gap: 0;
+  }
+  .footer-left,
+  .footer-right {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 10px;
+  }
+  .image-container {
+    width: 100%;
+    height: 250px;
+  }
+}
+
+/* ========== About Us Page Styles ========== */
+.about-page {
+  padding: 20px 30px;
+  max-width: 1100px;
+  margin: 0 auto;
+  background-color: #fff;
+  color: #222;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  box-sizing: border-box;
+}
+
+.about-page .about-hero {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.about-page .about-hero h1 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.about-page .about-hero img {
+  width: 100%;
+  max-width: 650px;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.about-page .about-content {
+  display: flex;
+  gap: 30px;
+  justify-content: space-between;
+}
+
+.about-page .about-text {
+  flex: 2;
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #444;
+}
+
+.about-page .about-text h2 {
+  margin-bottom: 15px;
+  color: #00796b;
+}
+
+.about-page .about-text p {
+  margin-bottom: 15px;
+}
+
+.about-page .quick-facts {
+  flex: 1;
+  background-color: #e0f7fa;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 15px rgba(0, 121, 107, 0.15);
+}
+
+.about-page .quick-facts h3 {
+  margin-bottom: 20px;
+  color: #004d40;
+  font-weight: 700;
+  font-size: 1.25rem;
+  border-bottom: 2px solid #00796b;
+  padding-bottom: 6px;
+}
+
+.about-page .quick-facts ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.about-page .quick-facts ul li {
+  margin-bottom: 12px;
+  font-weight: 600;
+  color: #00695c;
+}
+
+.about-page .quick-facts ul li strong {
+  font-weight: 700;
+  color: #004d40;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .about-page .about-content {
+    flex-direction: column;
+  }
+  .about-page .quick-facts,
+  .about-page .about-text {
+    width: 100%;
+  }
+  .about-page .about-hero h1 {
+    font-size: 2rem;
+  }
+}
+
+/* ========== Events Page Styles ========== */
+
+/* Container for events and date picker side by side */
+.events-container {
+  display: flex;
+  justify-content: space-between;
+  max-width: 1100px;
+  margin: 20px auto 60px;
+  gap: 40px;
+  padding: 0 30px;
+  box-sizing: border-box;
+}
+
+/* Events table styles */
+#eventsTable {
+  border-collapse: collapse;
+  width: 65%;
+  background-color: white;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 0 15px rgba(0, 121, 107, 0.15);
+  font-family: Arial, sans-serif;
+}
+
+#eventsTable th,
+#eventsTable td {
+  border: 1px solid #ddd;
+  padding: 12px 16px;
+  text-align: center;
+  color: #004d40;
+  font-weight: 600;
+}
+
+#eventsTable th {
+  background-color: #00796b;
+  color: white;
+  font-size: 1.1rem;
+}
+
+#eventsTable tbody tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+/* Event details message below date picker */
+#eventDetails {
+  font-weight: bold;
+  color: #d32f2f; /* red for emphasis */
+  margin-top: 10px;
+  min-height: 2rem;
+  font-size: 1.1rem;
+  text-align: center;
+}
+
+/* Date picker container */
+.date-picker-container {
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: Arial, sans-serif;
+  color: #004d40;
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+/* Date picker label */
+.date-picker-container label {
+  margin-bottom: 10px;
+  font-size: 1.2rem;
+}
+
+/* Date input styling */
+#eventDate {
+  padding: 8px 12px;
+  font-size: 1rem;
+  border: 2px solid #00796b;
+  border-radius: 6px;
+  outline: none;
+  cursor: pointer;
+  transition: border-color 0.3s ease;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+#eventDate:focus {
+  border-color: #004d40;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .events-container {
+    flex-direction: column;
+    padding: 0 15px;
+  }
+  #eventsTable {
+    width: 100%;
+  }
+  .date-picker-container {
+    width: 100%;
+    margin-top: 20px;
+  }
+}
+
+/* ========== Suggestion Box Styles ========== */
+.suggestion-page {
+  max-width: 600px;
+  width: 100%;
+  background-color: white;
+  padding: 25px 30px;
+  margin: 40px auto 60px;
+  border-radius: 8px;
+  box-shadow: 0 0 15px rgba(0,121,107,0.15);
+  color: #004d40;
+  font-family: Arial, sans-serif;
+}
+
+.suggestion-page h1 {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 30px;
+  color: #00796b;
+}
+
+.suggestion-page label {
+  display: block;
+  margin-bottom: 6px;
+  font-weight: 700;
+  font-size: 1rem;
+}
+
+.suggestion-page input[type="text"],
+.suggestion-page input[type="email"],
+.suggestion-page textarea {
+  width: 100%;
+  padding: 10px 12px;
+  border: 2px solid #00796b;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-family: inherit;
+  color: #004d40;
+  margin-bottom: 20px;
+  transition: border-color 0.3s ease;
+}
+
+.suggestion-page input[type="text"]:focus,
+.suggestion-page input[type="email"]:focus,
+.suggestion-page textarea:focus {
+  border-color: #004d40;
+  outline: none;
+}
+
+.suggestion-page textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+.suggestion-page button[type="submit"] {
+  background-color: #00796b;
+  color: white;
+  border: none;
+  padding: 12px 0;
+  font-weight: bold;
+  font-size: 1.1rem;
+  border-radius: 6px;
+  cursor: pointer;
+  width: 100%;
+  transition: background-color 0.3s ease;
+}
+
+.suggestion-page button[type="submit"]:hover {
+  background-color: #004d40;
+}
+
+#formMessage {
+  margin-top: 10px;
+  font-weight: 700;
+  font-size: 1rem;
+  color: red; /* default error color */
+  min-height: 1.5em;
+  text-align: center;
+}
+
+/* Responsive for suggestion box */
+@media (max-width: 480px) {
+  .suggestion-page {
+    margin: 20px 15px 40px;
+    padding: 20px;
+  }
+  .suggestion-page h1 {
+    font-size: 2rem;
+  }
+}
+
+
+
+.skills-page {
+  padding: 20px;
+  max-width: 1000px;
+  margin: auto;
+}
+
+.course-select {
+  margin-bottom: 20px;
+}
+
+.course-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.course-card {
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  padding: 15px;
+  width: calc(33% - 20px);
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  cursor: pointer;
+  background: #fff;
+  transition: transform 0.2s;
+}
+.course-card:hover {
+  transform: scale(1.05);
+}
+
+.course-card h3 {
+  margin-top: 0;
+}
+
+.course-details {
+  margin-top: 30px;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  background: #f9f9f9;
+}
+
+.course-details img {
+  max-width: 150px;
+  display: block;
+  margin: 10px 0;
+  border-radius: 50%;
+}
+
+#enrollBtn {
+  padding: 10px 15px;
+  background: green;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+#enrollBtn:hover {
+  background: darkgreen;
+}
+
+/* ================== SKILLS LAYOUT FIXES ================== */
+/* Minimal, targeted overrides so famous course cards ALWAYS render as the same card grid
+   even if JS changes style.display on the container. These rules are intentionally
+   scoped narrowly to avoid affecting the rest of your site. */
+
+.course-list,
+#courseList {
+  /* force grid/flex layout even if inline styles are applied by JS */
+  display: flex !important;
+  flex-wrap: wrap !important;
+  gap: 15px !important;
+  align-items: flex-start !important;
+  justify-content: flex-start !important;
+  width: 100% !important;
+  box-sizing: border-box !important;
+}
+
+.course-card {
+  box-sizing: border-box;
+  /* keep the same width as before, but make it robust */
+  width: calc(33% - 20px);
+  min-width: 220px;
+}
+
+/* make sure images inside cards look consistent */
+.course-card .mentor-photo,
+.course-card img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 6px;
+  display: block;
+  margin-bottom: 10px;
+}
+
+/* keep syllabus list readable inside cards */
+.course-card ul {
+  margin-top: 8px;
+  padding-left: 18px;
+}
+
+/* small screens: 2 columns */
+@media (max-width: 900px) {
+  .course-card {
+    width: calc(50% - 12px);
+  }
+}
+
+/* very small: full width */
+@media (max-width: 480px) {
+  .course-card {
+    width: 100%;
+  }
+  .course-card .mentor-photo,
+  .course-card img {
+    height: auto;
+  }
+  /* ensure course-details fits well on small screens */
+  .course-details {
+    padding: 16px;
+  }
+}
+
+
+/* Make all course cards same dimensions */
+.course-card {
+  width: 280px;              /* fixed width */
+  height: 400px;             /* fixed height */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 15px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  background-color: #fff;
+  text-align: center;
+}
+
+/* Ensure mentor photo is consistent */
+.course-card .mentor-photo {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;  /* crops to fit without distortion */
+  border-radius: 8px;
+}
+
+/* Make enroll button green */
+.enroll-btn {
+  background-color: #28a745;  /* green */
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.enroll-btn:hover {
+  background-color: #218838; /* darker green on hover */
+}
+
+

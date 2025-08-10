@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Kopwaon Village Website</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <nav class="navbar">
+      <div class="logo">Kopwaon Village</div>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="aboutus.html">About Us</a></li>
+        <li><a href="events.html">Event Calendar</a></li>
+        <li><a href="suggestions.html">Suggestion Box</a></li>
+
+        <li class="more-menu">
+          <button id="moreBtn" aria-haspopup="true" aria-expanded="false" aria-controls="moreDropdown">
+            More... ▼
+          </button>
+          <ul class="dropdown" id="moreDropdown" aria-label="More menu">
+            <li><a href="skills.html">Skill Sharing</a></li>
+          </ul>
+        </li>
+      </ul>
+      <div class="hamburger" id="hamburger">&#9776;</div>
+    </nav>
+  </header>
+
+  <main>
+    <section id="welcome">
+      <h1>Welcome to Kopwaon Village</h1>
+      <p>Your gateway to all things Kopwaon. Use the menu above to explore.</p>
+    </section>
+
+    <section id="gallery">
+      <h2>Village Gallery</h2>
+      <div class="image-container">
+        <img id="galleryImage" src="images/image1.jpg" alt="Village Scene 1" />
+        <p id="caption">Village Scene 1</p>
+      </div>
+      <div class="gallery-controls">
+        <button id="prevBtn" aria-label="Previous Image">◀ Previous</button>
+        <button id="nextBtn" aria-label="Next Image">Next ▶</button>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-left">
+      <h4>Contact Us</h4>
+      <p>Office Contact No: +91 96631 12089</p>
+      <p>Email: info@kopwaon.com</p>
+    </div>
+    <div class="footer-right">
+      <h4>Address</h4>
+      <p>Village - Kopwaon, District - Buxar</p>
+      <p>State - Bihar, PIN - 802126</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
