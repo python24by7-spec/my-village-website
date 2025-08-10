@@ -178,9 +178,9 @@ if (suggestionForm && formMessage) {
 
 // Courses data
 const courses = [
-  { id: 1, title: "Organic Farming Basics", mentor: "Ravi Kumar", mentorPhoto: "images/mentor1.jpg", syllabus: ["Soil Preparation", "Natural Fertilizers", "Pest Control", "Crop Rotation"], duration: 20, contact: "+91 98765 43210" },
-  { id: 2, title: "Handloom Weaving", mentor: "Sita Devi", mentorPhoto: "images/mentor2.jpg", syllabus: ["Loom Setup", "Thread Selection", "Weaving Patterns", "Finishing"], duration: 15, contact: "+91 91234 56789" },
-  { id: 3, title: "Basic Computer Skills", mentor: "Anil Sharma", mentorPhoto: "images/mentor3.jpg", syllabus: ["Computer Basics", "MS Office", "Internet Browsing", "Email Usage"], duration: 25, contact: "+91 99887 77665" }
+  { id: 1, title: "Mathematics Basics", mentor: "D.K Singh", mentorPhoto: "images/mentor1.jpg", syllabus: ["Till 10th Standard", "Number Systems", "Arithmetic Operations"], duration: 20, contact: "yeslistenplease@gmail.com" },
+  { id: 2, title: "Advanced Mathematics", mentor: "R.K Kumar", mentorPhoto: "images/mentor2.jpg", syllabus: ["Algebra", "Calculus", "Functions"], duration: 15, contact: "yeslistenplease@gmail.com" },
+  { id: 3, title: "Basic Computer Skills", mentor: "P.K Singh", mentorPhoto: "images/mentor3.jpg", syllabus: ["Computer Basics", "MS Office"], duration: 25, contact: "yeslistenplease@gmail.com" }
 ];
 
 const courseDropdown = document.getElementById("courseDropdown");
